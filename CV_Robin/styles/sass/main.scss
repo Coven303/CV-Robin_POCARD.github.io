@@ -1,0 +1,121 @@
+/**
+ * Modif. dimmensions et font du fichier HTML
+*/
+body {
+    font-family: 'IBM Plex Sans', "sans-serif";
+    margin: 0px; // Retrait des bordures blanches de base
+    }
+#main{ 
+    width: 60%; // Format type "CV" à 60% de l'écran
+    margin: auto;
+    background-color: transparent;
+}
+footer {
+    background-color: #F8CF47;
+    margin: 0px;
+    padding: 0 0 10px 0; // 0px top, 0px right, 10px bottom, 0px left
+}
+/**
+ * Modif. des balises titre <h>
+*/
+h1 {
+    color:#F8CF47;
+    font-size: 2em;
+    text-align: center;
+}
+h2 {
+    color:#F8CF47;
+    font-size: 1.2em;
+    margin: 10px 0 1px 0; // 10px top, 0px right, 1px bottom, 0px left
+}
+footer > h2 {
+    text-align: center;
+    color: black;
+    margin: 0px;
+}
+h4 {
+    font-size: 1em;
+    margin: 8px 0 5px 0; // 8px top, 0px right, 5px bottom, 0px left
+}
+/**
+ * Modif. des styles d'importance
+*/
+p { //Paragraphes normaux
+    margin: 0px;
+    font-size: 1em;
+}
+em { //Petite importance
+    margin: 0px;
+    font-size: 1em;
+}
+strong { //Grosse importance
+    margin: 0px;
+    font-size: 1em;
+}
+a {
+    text-decoration: none; // Retrait soulignage et changement de couleur après click
+    color: black;
+}
+
+/**
+ * Insertion photo
+ * Dimmensionnement photo
+ * Affichage photo over all
+*/
+#photo_id {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; // Création de l'espace en forme de cercle, D = 200px
+    background-image: url(../../assets/img/pp.jpg);
+    z-index: 1; // Affichage over all
+    align-self: center;
+    margin-top: -40%;
+    margin-left: -5%;
+    margin-bottom: 30px;
+}
+/**
+ * Définition et mise en place du GRID
+ * Ajout de quelques flex
+*/
+#grid-container{ // Zone de GRID
+    display: grid;
+    grid-template-columns: 1.8fr 3fr; // Dimmensions colonnes
+    grid-template-rows: 150px auto auto; // Dimmensions rangées
+    grid-gap: 10px 5px; // Dimmensions des gap (rangées + colonnes)
+    grid-template-areas: // Format du GRID
+    "hd hd"
+    "cg cd";
+}
+#header{
+    grid-area: hd; // Nom pour le GRID
+    width: auto;
+    background-image: url(../../assets/img/background.jpg)
+}
+#colonne_gauche {
+    grid-area: cg; // Nom pour le GRID
+    padding-left: 15px; // Marge intérieure de gauche
+    padding-right: 10px; // Marge intérieure droite
+    background-color:#F5F5F5;
+    display: flex; // Flexage de la colonne gauche
+    flex-flow: column; // Affichage des éléments flexés en colonne
+}
+#colonne_droite {
+    grid-area: cd; // Nom pour le GRID
+    padding-left: 15px; // Marge intérieure de gauche
+    padding-right: 10px; // Marge intérieure droite
+    background-color: #FFFFFF;
+    padding-bottom: 10px;
+}
+/**
+ * Ajout des réseaux avec logos + liens
+ * Ajout flex container
+*/
+.flex_container { // Container flex pour les réseaux
+    display: flex;
+    margin: 0 100px 0px 100px;
+    justify-content: space-between; // Type de positionnement
+}
+.logo { // Objet flexé de base en row
+    position: relative; // Changement de position pour un meilleur alignement
+    top: 5px; 
+}

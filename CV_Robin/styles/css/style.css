@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/**
+ * Modif. dimmensions et font du fichier HTML
+*/
+body {
+  font-family: "IBM Plex Sans", "sans-serif";
+  margin: 0px;
+}
+
+#main {
+  width: 60%;
+  margin: auto;
+  background-color: transparent;
+}
+
+footer {
+  background-color: #F8CF47;
+  margin: 0px;
+  padding: 0 0 10px 0;
+}
+
+/**
+ * Modif. des balises titre <h>
+*/
+h1 {
+  color: #F8CF47;
+  font-size: 2em;
+  text-align: center;
+}
+
+h2 {
+  color: #F8CF47;
+  font-size: 1.2em;
+  margin: 10px 0 1px 0;
+}
+
+footer > h2 {
+  text-align: center;
+  color: black;
+  margin: 0px;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 8px 0 5px 0;
+}
+
+/**
+ * Modif. des styles d'importance
+*/
+p {
+  margin: 0px;
+  font-size: 1em;
+}
+
+em {
+  margin: 0px;
+  font-size: 1em;
+}
+
+strong {
+  margin: 0px;
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/**
+ * Insertion photo
+ * Dimmensionnement photo
+ * Affichage photo over all
+*/
+#photo_id {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url(../../assets/img/pp.jpg);
+  z-index: 1;
+  align-self: center;
+  margin-top: -40%;
+  margin-left: -5%;
+  margin-bottom: 30px;
+}
+
+/**
+ * Définition et mise en place du GRID
+ * Ajout de quelques flex
+*/
+#grid-container {
+  display: grid;
+  grid-template-columns: 1.8fr 3fr;
+  grid-template-rows: 150px auto auto;
+  grid-gap: 10px 5px;
+  grid-template-areas: "hd hd" "cg cd";
+}
+
+#header {
+  grid-area: hd;
+  width: auto;
+  background-image: url(../../assets/img/background.jpg);
+}
+
+#colonne_gauche {
+  grid-area: cg;
+  padding-left: 15px;
+  padding-right: 10px;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-flow: column;
+}
+
+#colonne_droite {
+  grid-area: cd;
+  padding-left: 15px;
+  padding-right: 10px;
+  background-color: #FFFFFF;
+  padding-bottom: 10px;
+}
+
+/**
+ * Ajout des réseaux avec logos + liens
+ * Ajout flex container
+*/
+.flex_container {
+  display: flex;
+  margin: 0 100px 0px 100px;
+  justify-content: space-between;
+}
+
+.logo {
+  position: relative;
+  top: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

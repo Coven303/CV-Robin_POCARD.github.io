@@ -1,9 +1,20 @@
 @charset "UTF-8";
-/**
+/** FONTS
+ * Import fonts
+*/
+
+/*font-family: 'Spartan', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*font-family: 'Roboto', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/** MAIN
  * Modif. dimmensions et font du fichier HTML
 */
 body {
-  font-family: "IBM Plex Sans", "sans-serif";
+  font-family: 'Roboto', sans-serif;
   margin: 0px;
 }
 
@@ -15,42 +26,40 @@ body {
 
 footer {
   background-color: #F8CF47;
-  margin: 0px;
   padding: 0 0 10px 0;
 }
 
-/**
+/** BALISES H
  * Modif. des balises titre <h>
 */
 h1 {
+  font-family: 'Spartan', sans-serif;
   color: #F8CF47;
   font-size: 2em;
   text-align: center;
+  margin: 1em 0 1em 0;
 }
 
 h2 {
+  font-family: 'Spartan', sans-serif;
   color: #F8CF47;
   font-size: 1.2em;
-  margin: 10px 0 1px 0;
+  margin: 1em 0 0 0;
 }
 
-footer > h2 {
-  text-align: center;
-  color: black;
-  margin: 0px;
-}
 
-h4 {
+h3 {
   font-size: 1em;
-  margin: 8px 0 5px 0;
+  margin: .5em 0 .1em 0;
 }
 
-/**
+/** STYLES
  * Modif. des styles d'importance
 */
 p {
   margin: 0px;
   font-size: 1em;
+  padding: .1em;
 }
 
 em {
@@ -67,8 +76,23 @@ a {
   text-decoration: none;
   color: black;
 }
+a:hover {
+  opacity: .8;
+}
 
-/**
+ul {
+  margin: .5em 0 .1em 0;
+  padding: 0 0 0 1em;
+}
+
+li {
+  margin: .1em 0 0 0;
+}
+
+span {
+  font-weight: 400; /* Police neutre */
+}
+/** PHOTOS
  * Insertion photo
  * Dimmensionnement photo
  * Affichage photo over all
@@ -85,16 +109,23 @@ a {
   margin-bottom: 30px;
 }
 
-/**
+h3 > img {
+  position: relative;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+}
+/** GRID
  * Définition et mise en place du GRID
  * Ajout de quelques flex
 */
-#grid-container {
+#grid_container {
   display: grid;
   grid-template-columns: 1.8fr 3fr;
   grid-template-rows: 150px auto auto;
   grid-gap: 10px 5px;
-  grid-template-areas: "hd hd" "cg cd";
+  grid-template-areas: "hd hd" 
+                      "cg cd";
 }
 
 #header {
@@ -120,7 +151,7 @@ a {
   padding-bottom: 10px;
 }
 
-/**
+/** FLEX
  * Ajout des réseaux avec logos + liens
  * Ajout flex container
 */
@@ -135,4 +166,7 @@ a {
   top: 5px;
 }
 
-/*# sourceMappingURL=style.css.map */
+button {
+  background-color: transparent;
+  border: none;
+}
